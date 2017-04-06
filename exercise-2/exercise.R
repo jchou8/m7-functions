@@ -11,7 +11,8 @@ CompareLength <- function(vec.one, vec.two) {
 # Pass two vectors of different length to your `CompareLength` function
 people <- c("Mark", "John", "Ricardo")
 things <- c("Soup", "Bubbles", "Soap", "Water", "Lentils")
-CompareLength(people, things)
+
+print(CompareLength(people, things))
 
 # Write a function `DescribeDifference` that will return one of the following statements:
 # "Your first vector is longer by N elements"
@@ -38,6 +39,9 @@ DescribeDifferenceName <- function(vec.one, vec.two) {
   if (length(vec.one) > length(vec.two)) {
     return (paste("Vector", deparse(substitute(vec.one)), "is longer by", difference, "elements"))
   } else {
-    return (paste("Vector", deparse(substitute(vec.one)), "is longer by", difference, "elements"))
+    return (paste("Vector", deparse(substitute(vec.two)), "is longer by", difference, "elements"))
   }
 }
+
+# Pass two vectors to your `DescribeDifference` function
+print(DescribeDifferenceName(people, things))
