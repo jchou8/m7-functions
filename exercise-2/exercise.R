@@ -32,3 +32,12 @@ print(DescribeDifference(people, things))
 ### Bonus ###
 
 # Rewrite your `DescribeDifference` function to tell you the name of the vector which is longer
+DescribeDifferenceName <- function(vec.one, vec.two) {
+  difference <- abs(length(vec.one) - length(vec.two))
+  
+  if (length(vec.one) > length(vec.two)) {
+    return (paste("Vector", deparse(substitute(vec.one)), "is longer by", difference, "elements"))
+  } else {
+    return (paste("Vector", deparse(substitute(vec.one)), "is longer by", difference, "elements"))
+  }
+}
